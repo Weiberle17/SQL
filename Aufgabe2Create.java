@@ -19,7 +19,9 @@ public class Aufgabe2Create {
     "MatrN int," +
     "kNr int," +
     "note int," +
-    "primary key(MatrN, kNr))";
+    "primary key(MatrN, kNr)," +
+    "foreign key(MatrN) references studierende(MatrN)," + 
+    "foreign key(kNr) references klausur(kNr))";
   public static void main(String[] args) {
     Aufgabe2Create studierende = new Aufgabe2Create();
     Aufgabe2Create klausur = new Aufgabe2Create();
@@ -40,4 +42,3 @@ public class Aufgabe2Create {
     }
   }
 }
-//    "foreign key(MatrN) references studierende," + "foreign key(kNr) references klausur)";
